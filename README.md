@@ -26,13 +26,14 @@ This python script, output the inserted data into MongoDB to the console.
 
 # How to use it.
 1. Clone the repository
-2. Run docker-compose up to start the services.
-    a. Once started spark stream session will start.
-    b. MongoDB service will also start
-    c. IoT data will writing to MongoDB using the spark structured stream.
+2. Run **docker-compose up** to start the services.
+    * Once started spark stream session will start.
+    * MongoDB service will also start
+    * IoT data will writing to MongoDB using the spark structured stream.
+    
 3. To read the inserted data from MongoDB run docker-compose run readmongodb from another terminal
-    a. ![First output from MongoDB](https://github.com/buhari15/Stream_Iot_to_MongoDB/blob/master/Screen_shoots/Reading_first_data.png)
-    b. ![First output from MongoDB](https://github.com/buhari15/Stream_Iot_to_MongoDB/blob/master/Screen_shoots/Read_second.png)
+    * ![First output from MongoDB](https://github.com/buhari15/Stream_Iot_to_MongoDB/blob/master/Screen_shoots/Reading_first_data.png)
+    * ![First output from MongoDB](https://github.com/buhari15/Stream_Iot_to_MongoDB/blob/master/Screen_shoots/Read_second.png)
 
 ## Author
 

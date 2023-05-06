@@ -1,7 +1,7 @@
 # Streaming IoT data to MongoDB
 
 The data source can be found on the following link.
-![Raw data](https://www.kaggle.com/code/garystafford/iot-telemetry-demo-notebook)
+[Raw data](https://www.kaggle.com/code/garystafford/iot-telemetry-demo-notebook)
 
 There are  5 python scripts in this project.
 1. Ping connection
@@ -28,7 +28,7 @@ This python script, output the inserted data into MongoDB to the console.
 1. Clone the repository
 2. Run **docker-compose up** to start the services.
     * Once started spark stream session will start.
-    * MongoDB service will also start
+    * MongoDB service will also start.
     * IoT data will writing to MongoDB using the spark structured stream.
     
 3. To read the inserted data from MongoDB run **docker-compose run readmongodb** from another terminal

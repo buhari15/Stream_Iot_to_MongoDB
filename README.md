@@ -25,8 +25,8 @@ This python script, use the spark structured stream to write IoT data to MongoDB
 This python script, output the inserted data into MongoDB to the console.
 
 # How to use it.
-1. Clone the repository using **git clone https://github.com/buhari15/Stream_Iot_to_MongoDB.git **
-2. Navigate to the folder and run **docker-compose up --build ** to build and start the services.
+1. Clone the repository using **git clone https://github.com/buhari15/Stream_Iot_to_MongoDB.git**
+2. Navigate to the folder and run **docker-compose up --build** to build and start the services.
     * Once built spark stream session will start.
     * MongoDB service will also start.
     * Spark Structured stream will stream the IoT data to MongoDB as the sink.

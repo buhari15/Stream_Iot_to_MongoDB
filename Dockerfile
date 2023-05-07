@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-slim
 
 LABEL maintainer="Buhari Abubakar"
 LABEL description="This docker will install python and the required libraries"
@@ -9,19 +9,13 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /code/
 
-RUN apt-get update
-RUN apt-get install default-jdk -y
-
+RUN apt-get update && apt-get install -y default-jdk
 
 COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-COPY ./code ./code
 
-COPY ./data/file ./data/file
+COPY --chown=1000:1000 ./code ./code
+COPY --chown=1000:1000 ./data/file ./data/file
 
-
-CMD [ "python",  "./code/spark_read_csvd.py"]
-
-# "./code/read_db_data.py", 

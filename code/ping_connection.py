@@ -13,3 +13,5 @@ def ping_connection():
     
     except Exception as e:
         print(f'There is error to connecting MongoDB Server: {e}')
+
+ping_connection()

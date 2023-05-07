@@ -3,6 +3,7 @@
 The data source can be found on the following link.<br> 
 [Raw data](https://www.kaggle.com/code/garystafford/iot-telemetry-demo-notebook)
 
+This project is developed using Docker containers.<br> 
 There are  5 python scripts in this project.
 1. Ping connection. <br>
 ![Ping connection](https://github.com/buhari15/Stream_Iot_to_MongoDB/blob/master/code/ping_connection.py)

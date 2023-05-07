@@ -2,18 +2,19 @@ version: '3.9'
 
 services:
   mongodb:
-      image: mongo
+      image: mongo:latest
       restart: always
       ports:
         - '27017:27017'
 
   ping:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: ping_image:latest
     command: python ./code/ping_connection.py
-
     volumes:
         - 'telemetry_data:/data/file'
-
 
   spark:
     image: docker.io/bitnami/spark:3.3
@@ -39,11 +40,17 @@ services:
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
   sparkwrite:
-      build: .
+      build: 
+        context: .
+        dockerfile: Dockerfile
+      image: spark_stream_write_image:latest
       command: python ./code/write_to_mongodb.py
   
   readmongodb:
-      build: .
+      build: 
+        context: .
+        dockerfile: Dockerfile
+      image: read_mongodb_data_image:latest
       command: python ./code/read_db_data.py
       
 volumes:
